@@ -16,6 +16,27 @@ namespace ShiftwiseShuffle
 
             return  thisCardFullValue >= compareCardFullValue? 1 : -1;
         }
+
+        public override string ToString()
+        {
+            char suit = ' ';
+            switch (Suit)
+            {
+                case Suit.CLUBS:
+                    suit = 'C';
+                    break;
+                case Suit.DIAMONDS:
+                    suit = 'D';
+                    break;
+                case Suit.HEARTS:
+                    suit = 'H';
+                    break;
+                case Suit.SPADES:
+                    suit = 'S';
+                    break;
+            }
+            return string.Format("{0}{1}",FaceValue,suit);
+        }
     }
 
     public enum Suit
